@@ -1,0 +1,57 @@
+
+/* Style the hamburger menu button */
+.menu-toggle {
+  background: blue;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  position: absolute; /* Position the button absolutely */
+  top: 10px; /* Adjust top positioning as needed */
+  right: 10px; /* Adjust left positioning as needed */
+
+}
+
+/* Style the navigation list */
+.nav-list {
+  list-style-type: none;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end; /* Align the menu toggle to the right */
+}
+
+.nav-list li {
+  margin: 0 20px;
+  background-color: yellow;
+}
+
+
+.nav-list.show-menu li {
+  margin: 10px 0;
+  background-color: blue;
+}
+
+
+/* Add this media query at the end of your CSS file */
+@media (max-width: 768px) {
+  .menu-toggle {
+    background-color: red;
+    display: block;
+    
+    
+  }
+
+  .nav-list.show-menu {
+    display: flex;
+  }
+}
+
+/* Add this media query at the end of your CSS file */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: block;
+  
+  }
+}

@@ -1,38 +1,71 @@
 .App {
   text-align: center;
+  color: sage;
+  z-index: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* For headings and titles on the page */
+h1, h2, h3, h4, h5, h6 {
+  padding: 10px; /* Padding for the text boxes around headings */
+  position: relative; /* Set to relative so we can position the pseudo-elements */
+  font-family: 'Brush Script MT', cursive; /* Set the brush script font */
+  color: #231B54; /* Top text color */
+  z-index: 2; /* Ensures this is on top */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Create the white shadow/3D effect using a pseudo-element */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  content: attr(data-text); /* Use the data-text attribute as content */
+  position: absolute; /* Position it absolutely within the parent heading */
+  top: 11px; /* Slight vertical deviation */
+  left: 7px; /* Slight horizontal deviation */
+  color: #FFFFFF; /* White color for the shadow text */
+  z-index: -1; /* Place it behind the main text, but above the background */
+  font-family: 'Brush Script MT', cursive; /* Set the brush script font */
 }
+
+/* Background color using a pseudo-element */
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #E6B5A5; /* Background color for text boxes of headings */
+  z-index: -2; /* Place it behind both texts */
+  border-radius: 5px; /* Rounded corners for the text boxes */
+}
+
+
+/* General styling for the whole page (assuming the navbar is part of a larger webpage) */
+body {
+  background-color: #FFFFFF; /* White background for the entire page */
+  color: #1A1919; /* Body text color */
+  font-family: 'Arial', sans-serif; /* Example font, replace with your preferred font if needed */
+}
+
+
+
+
+/* For textboxes or input fields on the page */
+input, textarea {
+  background-color: #E4E4E3; /* Textboxes or background color */
+  border: 1px solid #B79A51; /* Clip art or trim color for textbox border */
+  color: #1A1919; /* Body text color for the input */
+  padding: 8px;
+}
+
+
+

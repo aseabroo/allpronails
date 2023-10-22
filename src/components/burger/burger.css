@@ -1,0 +1,33 @@
+/* burger.css */
+
+/* CSS to style the bars */
+.container {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  /* Styling for each bar */
+  .bar {
+    width: 30px;              /* Width of each bar */
+    height: 3px;              /* Height of each bar */
+    background-color: #333;  /* Background color of each bar */
+    margin: 6px 0;            /* Spacing between bars */
+    transition: 0.4s;        /* Transition duration for animation */
+  }
+  
+  /* CSS to style the bars when the container is clicked */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
