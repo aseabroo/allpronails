@@ -1,16 +1,4 @@
 
-/* Style the hamburger menu button */
-.menu-toggle {
-  background: blue;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  display: none;
-  position: absolute; /* Position the button absolutely */
-  top: 10px; /* Adjust top positioning as needed */
-  right: 10px; /* Adjust left positioning as needed */
-
-}
 
 /* Style the navigation list */
 .nav-list {
@@ -35,23 +23,27 @@
 
 
 /* Add this media query at the end of your CSS file */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .menu-toggle {
     background-color: red;
-    display: block;
+    display: none;
     
     
   }
 
-  .nav-list.show-menu {
+  .nav-list {
     display: flex;
   }
 }
 
 /* Add this media query at the end of your CSS file */
-@media (min-width: 769px) {
+@media (min-width: 801px) {
   .menu-toggle {
     display: block;
   
+  }
+
+  .nav-list .show-menu {
+    display: none;
   }
 }

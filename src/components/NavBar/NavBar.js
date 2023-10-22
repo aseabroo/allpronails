@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css'; // import navbar styles
 import '/Users/augustusseabrooke/Desktop/Business/All Pro Nails /allpronails/src/components/NavBar/NavBar.js'
-import Burger from './src/components/burger/burger.js';
+import Burger from '/Users/augustusseabrooke/Desktop/Business/All Pro Nails /allpronails/src/components/burger/burger.js';
 
 function NavBar() {
      // Initialize showMenu as false
