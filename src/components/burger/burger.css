@@ -4,7 +4,10 @@
 .container {
     display: inline-block;
     cursor: pointer;
+    position: fixed;
     z-index: 2;
+    top: 50px;
+    right: 50px;
   }
   
   /* Styling for each bar */
@@ -31,3 +34,19 @@
     transform: rotate(45deg) translate(-5px, -6px);
   }
   
+  @media (max-width: 800px) {
+    .container {
+      display: block;
+      
+      
+    }
+  }
+
+  @media (min-width: 801px) {
+    .container {
+      background-color: red;
+      display: none;
+      
+      
+    }
+  }
