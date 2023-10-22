@@ -22,7 +22,6 @@ function NavBar() {
       console.log('bar1 and bar2 are NOT showing up');
     }
 
-  
     return (
         <>
           <Burger showMenu={showMenu} toggleMenu={toggleMenu} /> {/* Use the Burger component */}
